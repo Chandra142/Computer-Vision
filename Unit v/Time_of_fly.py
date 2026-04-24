@@ -2,23 +2,20 @@ import cv2
 import matplotlib.pyplot as plt
 depth_map = cv2.imread('Unit v/tof2.jpg', cv2.IMREAD_UNCHANGED)
 
-centre_depth = depth_map[200,200]
+centre_depth = depth_map[25,25]
 print(f"Distance to centre: {centre_depth} mm")
 
-def tof_distance(time_ns):
-	c = 3e8
-	time_s = time_ns * 1e-9 
-	distance = (c*time_s)/2
-	return distance
+# def tof_distance(time_ns):
+# 	c = 3e8
+# 	time_s = time_ns * 1e-9 
+# 	distance = (c*time_s)/2
+# 	return distance
 
-time_ns = 12
-distance = tof_distance(time_ns)
-print(f"obj is {distance:.2f} meter away.")
+# time_ns = 12
+# distance = tof_distance(time_ns)
+# print(f"obj is {distance:.2f} meter away.")
 
-"""(.venv) C:\Users\ramch\OneDrive\Desktop\C_vision>python -u "c:\Users\ramch\OneDrive\Desktop\C_vision\Unit v\Time_of_fly.py"
-Distance to centre: [ 38  29  22 255] mm
-obj is 1.80 meter away.
-Object is 1.80 meters away from the camera."""
+
 
 
 #example2
